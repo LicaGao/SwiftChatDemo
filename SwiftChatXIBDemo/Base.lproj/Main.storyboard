@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="njK-tI-fRT">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="HelveticaNeueLights.ttc">
+            <string>HelveticaNeue-Light</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--Siri-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="SwiftChatXIBDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iF3-hK-axc">
+                                <rect key="frame" x="0.0" y="553" width="375" height="50"/>
+                                <subviews>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="eZd-LY-GZi">
+                                        <rect key="frame" x="10" y="10" width="285" height="30"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qfu-gy-02X">
+                                        <rect key="frame" x="305" y="10" width="60" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="60" id="bCv-DD-DT4"/>
+                                        </constraints>
+                                        <state key="normal" title="发送">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" red="0.40000000000000002" green="0.59999999999999998" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="eZd-LY-GZi" secondAttribute="bottom" constant="10" id="0sW-6x-hJI"/>
+                                    <constraint firstAttribute="height" constant="50" id="6Hx-Jc-4gr"/>
+                                    <constraint firstAttribute="trailing" secondItem="qfu-gy-02X" secondAttribute="trailing" constant="10" id="7KK-2c-wyF"/>
+                                    <constraint firstItem="eZd-LY-GZi" firstAttribute="leading" secondItem="iF3-hK-axc" secondAttribute="leading" constant="10" id="ZGx-TL-XNG"/>
+                                    <constraint firstItem="eZd-LY-GZi" firstAttribute="centerY" secondItem="iF3-hK-axc" secondAttribute="centerY" id="ah9-Bn-HlR"/>
+                                    <constraint firstAttribute="bottom" secondItem="qfu-gy-02X" secondAttribute="bottom" constant="10" id="gDQ-z5-ZE6"/>
+                                    <constraint firstItem="qfu-gy-02X" firstAttribute="top" secondItem="iF3-hK-axc" secondAttribute="top" constant="10" id="hH8-qk-pVS"/>
+                                    <constraint firstItem="qfu-gy-02X" firstAttribute="centerY" secondItem="iF3-hK-axc" secondAttribute="centerY" id="l8T-dO-bBR"/>
+                                    <constraint firstItem="qfu-gy-02X" firstAttribute="leading" secondItem="eZd-LY-GZi" secondAttribute="trailing" constant="10" id="osN-0o-V9y"/>
+                                    <constraint firstItem="eZd-LY-GZi" firstAttribute="top" secondItem="iF3-hK-axc" secondAttribute="top" constant="10" id="sdI-SW-p75"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="iF3-hK-axc" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="7D2-Na-sfC"/>
+                            <constraint firstItem="iF3-hK-axc" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="S9c-2k-kMg"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="iF3-hK-axc" secondAttribute="bottom" id="a7y-Jp-mY7"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="iF3-hK-axc" secondAttribute="trailing" id="wGw-hZ-sad"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Siri" id="QP3-3E-aS4"/>
+                    <connections>
+                        <outlet property="sendBtn" destination="qfu-gy-02X" id="49D-Qp-TBf"/>
+                        <outlet property="sendTextView" destination="eZd-LY-GZi" id="PEM-JQ-oC7"/>
+                        <outlet property="sendView" destination="iF3-hK-axc" id="dpS-v1-g8i"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="456.80000000000001" y="118.29085457271366"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="RU2-RA-qaf">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="njK-tI-fRT" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" barStyle="black" translucent="NO" id="oMY-mn-8FZ">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="0.40000000000000002" green="0.59999999999999998" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="Tpx-rt-rRf"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="eZT-6p-AsU" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-399" y="118"/>
+        </scene>
+    </scenes>
+</document>

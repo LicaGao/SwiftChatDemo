@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="HelveticaNeueLights.ttc">
+            <string>HelveticaNeue-Light</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="inCell" id="KGk-i7-Jjw" customClass="MsgInTableViewCell" customModule="SwiftChatXIBDemo" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="43.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="lcJ-Ej-MLh">
+                        <rect key="frame" x="10" y="5" width="55.5" height="33.5"/>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EZy-a5-oSB">
+                        <rect key="frame" x="25" y="15" width="35.5" height="13.5"/>
+                        <constraints>
+                            <constraint firstAttribute="width" relation="lessThanOrEqual" constant="220" id="IAJ-bW-yUc"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="15"/>
+                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="bottom" secondItem="EZy-a5-oSB" secondAttribute="bottom" constant="15" id="DCt-BB-fOe"/>
+                    <constraint firstItem="EZy-a5-oSB" firstAttribute="centerX" secondItem="lcJ-Ej-MLh" secondAttribute="centerX" constant="5" id="Ohy-lR-y5p"/>
+                    <constraint firstAttribute="bottom" secondItem="lcJ-Ej-MLh" secondAttribute="bottom" constant="5" id="SXH-f4-3iJ"/>
+                    <constraint firstItem="lcJ-Ej-MLh" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="5" id="UVf-U8-uHd"/>
+                    <constraint firstItem="lcJ-Ej-MLh" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="n3Z-bZ-9Vr"/>
+                    <constraint firstItem="EZy-a5-oSB" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="15" id="uUG-2S-619"/>
+                    <constraint firstItem="lcJ-Ej-MLh" firstAttribute="width" secondItem="EZy-a5-oSB" secondAttribute="width" constant="20" id="wWj-aH-0eb"/>
+                </constraints>
+            </tableViewCellContentView>
+            <color key="backgroundColor" red="0.93725490570000003" green="0.93725490570000003" blue="0.95686274770000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="inBubble" destination="lcJ-Ej-MLh" id="m7D-bd-5NT"/>
+                <outlet property="inLabel" destination="EZy-a5-oSB" id="aRy-dZ-MhS"/>
+            </connections>
+        </tableViewCell>
+    </objects>
+</document>
